@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>From March 5th to Forever ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #000000, #1a001a);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.section {
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  border: none;
+  background: #ff4d88;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff1a66;
+}
+
+img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(255, 77, 136, 0.6);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+iframe {
+  margin-top: 20px;
+  border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="section fade-in">
+  <h1>March 5th, 2025</h1>
+  <p>
+    The day I met the girl who changed everything.
+    I didn’t know it then…
+    but this was the beginning of my favorite story.
+  </p>
+  <button onclick="scrollToNext()">Start Our Journey ❤️</button>
+</div>
+
+<div class="section fade-in">
+  <h1>The First Time I Saw You</h1>
+  <img src="your-photo-1.jpg" alt="Our First Photo">
+  <p>
+    I still remember that smile.
+    I remember how I felt.
+    Something about you felt different.
+  </p>
+
+  <!-- Romantic Song 1 -->
+  <iframe width="300" height="170"
+  src="https://www.youtube.com/embed/450p7goxZqg"
+  allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+</div>
+
+<div class="section fade-in">
+  <h1>The Moments That Made Me Fall</h1>
+  <img src="your-photo-2.jpg" alt="Cute Moment">
+  <p>
+    Every laugh.
+    Every late-night talk.
+    Every small moment that became a big memory.
+  </p>
+
+  <!-- Romantic Song 2 -->
+  <iframe width="300" height="170"
+  src="https://www.youtube.com/embed/hoNb6HuNmU0"
+  allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+</div>
+
+<div class="section fade-in">
+  <h1>Through Everything</h1>
+  <img src="your-photo-3.jpg" alt="Together">
+  <p>
+    Not every day was perfect.
+    But every day with you was worth it.
+    You made me grow.
+    You made me better.
+  </p>
+
+  <!-- Romantic Song 3 -->
+  <iframe width="300" height="170"
+  src="https://www.youtube.com/embed/JGwWNGJdvx8"
+  allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+</div>
+
+<div class="section fade-in">
+  <h1>Today</h1>
+  <img src="your-photo-4.jpg" alt="Recent Photo">
+  <p>
+    And today…
+    I don’t just love you.
+    I choose you.
+    Every single day.
+  </p>
+
+  <h1 style="margin-top:40px;">Happy Valentine’s Day ❤️</h1>
+  <p>
+    This is just the first chapter.
+    Forever starts now.
+  </p>
+</div>
+
+<script>
+function scrollToNext() {
+  window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+}
+
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('show');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
+
+</body>
+</html>
