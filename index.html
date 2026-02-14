@@ -95,9 +95,37 @@ Click the heart below to relive our journey.
 </p>
 
 <div class="heart-container" onclick="openGallery()">
-  <div class="heart">❤️</div>
-  <p>(Click Me)</p>
+
+  <div style="
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(255, 0, 102, 0.3);
+    cursor: pointer;
+  ">
+
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=49.279296,-122.920570&zoom=15&size=600x300&markers=color:red%7C49.279296,-122.920570"
+    style="width:100%; display:block;">
+
+    <div style="
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 0, 102, 0.85);
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+    ">
+      The place where I first saw you ❤️
+      <div style="font-size: 13px;">Tap to relive our story</div>
+    </div>
+
+  </div>
+
 </div>
+
 
 <div class="gallery" id="gallery">
 
